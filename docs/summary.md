@@ -6,33 +6,33 @@ your own run printed. Write each answer in place of the placeholder under
 its question.
 
 Run `uv run python src/main.py` before you start writing. Everything these
-questions ask about is in its output.
+questions ask about is in its output, or one `risk` away.
 
 ---
 
-> **1. Where naive Bayes is Bayes' rule.**
+> **1. Riskier is not always more worth testing.**
 >
-> Your run prints P(present | camera yes) twice, once from `bayes_rule` and
-> once from `classify`. Give the number, and explain why the two agree.
+> Your run's table shows the agent running the tests on "rename a
+> variable" but not on "add a small feature", which is more likely to be
+> buggy. Give the value of information of the tests for each.
 >
-> Then give P(present | camera yes, lidar no) from your run. Name the
-> assumption `classify` makes to combine the two sensors that `bayes_rule`
-> never had to make.
+> Then explain the difference using the lines your run printed under each
+> change: what the agent does if the tests pass, and what it does if they
+> fail.
 
 TODO
 
 ---
 
-> **2. A second camera.**
+> **2. Who sets the utilities.**
 >
-> With camera2 the detector is more confident a pedestrian is there when both
-> cameras say yes. Give the two naive Bayes numbers and the two numbers your
-> run counted directly in the training data. Explain the difference using
-> what camera2 is.
+> Change one number in `UTILITIES` in `src/agent.py` to what you think a
+> real team should use, and run again. Say which number you changed, from
+> what to what, and what changed in the table.
 >
-> Then give the accuracy and both kinds of mistake, with and without camera2.
-> Which version would you put in a car, and why? Name who carries the cost of
-> each kind of mistake.
+> Then say who your change protects and who it costs: the users of the
+> software, the teammate who reviews, or the person who wrote the change.
+> Put the number back before you submit.
 
 TODO
 
@@ -42,7 +42,7 @@ TODO
 >
 > State what AI tools you used on this challenge, if any, and what they
 > did. "None" is a complete answer if it is true. Be specific: "I used X to
-> explain what smoothing does" and "I used X to write `classify`" are very
-> different disclosures.
+> explain what expected utility means" and "I used X to write
+> `value_of_information`" are very different disclosures.
 
 TODO
